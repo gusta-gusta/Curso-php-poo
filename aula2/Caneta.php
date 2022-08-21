@@ -7,7 +7,7 @@ class caneta{     // Criar classe caneta
     var $carga;
     var $tampada;
 
-    function rabiscar(){
+    function rabiscar(){ // metodo
         if ($this->tampada == true) { //Tampada não rabisca
             echo "<p> Estou tampada! não posso rabiscar!</p>";
         }else{
@@ -22,11 +22,11 @@ class caneta{     // Criar classe caneta
 }
 }
     }
-    function tampar() {
+    function tampar() { // metodo
         $this->tampada = true; //$this é o valor do objeto chamado, precisa estar definido
     }
 
-    function destampar() {
+    function destampar() { // metodo
         $this->tampada = false; //$this é o valor do objeto chamado, precisa estar definido
     }
 }

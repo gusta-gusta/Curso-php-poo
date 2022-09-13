@@ -53,7 +53,7 @@ require_once 'controlador.php';
             }
             echo "<br>";
             }
-    } 
+     
     public function fecharMenu() {
          echo "<br>Fechando Menu...";
     }

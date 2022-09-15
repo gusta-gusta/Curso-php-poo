@@ -1,5 +1,5 @@
 <?php
-require_once 'controlador.php';
+require_once 'Controlador.php';
     class ControleRemoto implements Controlador{
 
     //Atributos
@@ -22,7 +22,7 @@ require_once 'controlador.php';
             return $this-> ligado;
     }
     function getTocando() {
-            return$this-> tocando;
+            return $this-> tocando;
     }
 
 
@@ -48,8 +48,8 @@ require_once 'controlador.php';
             echo "<br>Está ligado?: " . ($this->getLigado()?"SIM":"NÃO");
             echo "<br>Está tocando?: " . ($this->getTocando()?"SIM":"NÃO");
             echo "<br>Volume: " . $this->getVolume();
-            for($i=0; $i <= $this->getVolume(); $i= $i + 10) {
-                echo "";
+            for($i=0; $i <= $this->getVolume(); $i+= 10) {
+                echo "#";
             }
             echo "<br>";
             }
@@ -59,24 +59,36 @@ require_once 'controlador.php';
     }
     public function maisVolume() {  
         if ($this->getLigado()){
-            $this->setVolume($this->getVolume() + 5);
+            $this->setVolume($this->getVolume() + 15);
         }
     }
     public function menosVolume(){
         if ($this->getLigado()) {
-            $this->setVolume($this->getVolume() - 5);
+            $this->setVolume($this->getVolume() - 15);
         }
     }
     public function ligarMudo() {
-
+        if ($this->getLigado() && $this->getVolume()>0) {
+            $this->setVolume(0);
+        }
     }
     public function desligarMudo() {
+        if ($this->getLigado() && $this->getVolume()>0) {
+            $this->setVolume(50);
+        }
 
     }
     public function play() {
+        if ($this->getLigado() && ! (getTocando())){
+            $this->setTocando(true);
+        } 
+
 
     }
     public function pause() {
+        if ($this->getLigado() && ! (getTocando())){
+            $this->setTocando(false);
+        }
 
     }
     }

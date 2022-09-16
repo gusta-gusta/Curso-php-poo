@@ -108,3 +108,6 @@ class Lutadores{
         setVitorias()(getVitorias() +1);
     }
 }
+
+
+?>

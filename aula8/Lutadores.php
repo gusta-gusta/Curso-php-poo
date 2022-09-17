@@ -26,53 +26,53 @@ class Lutador {
 
 //---------------------------------------------------- 
 // Getters 
-  private function getNome() {
+   function getNome() {
     return $this->nome;
   }
-  private function getNacionalidade() {
+   function getNacionalidade() {
     return $this->nacionalidade;
   }
-  private function getIdade() {
+   function getIdade() {
     return $this->idade;
   }
-  private function getAltura() {
+   function getAltura() {
     return $this->altura;
   }
-  private function getPeso() {
+   function getPeso() {
     return $this->peso;
   }
-  private function getCategoria() {
+   function getCategoria() {
     return $this->categoria;
   }
-  private function getVitorias() {
+   function getVitorias() {
     return $this->vitorias;
   }
-  private function getDerrotas() {
+   function getDerrotas() {
     return $this->derrotas;
   }
-  private function getEmpates() {
+   function getEmpates() {
     return $this->empates;
   }
 //---------------------------------------------------- 
 // Setters
    
-  private function setNome($nome) {
+   function setNome($nome) {
     $this->nome = $nome;
   }
-  private function setNacionalidade($nacionalidade) {
+   function setNacionalidade($nacionalidade) {
     $this->nacionalidade = $nacionalidade;
   }
-  private function setIdade($idade) {
+   function setIdade($idade) {
     $this->idade = $idade;
   }
-  private function setAltura($altura) {
+   function setAltura($altura) {
     $this->altura = $altura;
   }
-  private function setPeso($pe) {
+   function setPeso($pe) {
     $this->peso = $pe;
     $this->setCategoria();
   }
-  private function setCategoria() {
+   function setCategoria() {
     if ($this->peso < 52.2) {
       $this->categoria = "Invalido";
     } elseif ($this->peso <= 70.3) {
@@ -85,13 +85,13 @@ class Lutador {
       $this->categoria = "Invalido";
     }
   }
-  private function setVitorias($vit) {
+   function setVitorias($vit) {
     $this->vitorias = $this->getVitorias() + $vit;
   }
-  private function setDerrotas($der) {
+   function setDerrotas($der) {
     $this->derrotas = $this->getDerrotas() + $der;
   }
-  private function setEmpates($emp) {
+   function setEmpates($emp) {
      $this->empates = $this->getEmpates + $emp;
   } 
 

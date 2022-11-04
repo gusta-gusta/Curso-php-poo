@@ -9,17 +9,6 @@
         private $rounds;
         private $aprovada;
 
-
-        // Método Construtor 
-        public function _construct() {
-
-            $this->$desafiado = $desafiado;
-            $this->$desafiante = $desafiante;
-            $this->$rounds = $rounds;
-            $this->$aprovada = $aprovada;
-
-        }
-
 // Getters
         private function getDesafiado(){
             return $this->desafiado;
@@ -38,13 +27,13 @@
         private function setDesafiado($desafiado){
             $this->desafiado = $desafiado;
         }
-        private function setDesafiante() {
+        private function setDesafiante($desafiante) {
             $this->desafiante = $desafiante;
         }
-        private function setRounds() {
+        private function setRounds($rounds) {
             $this->rounds = $rounds;
         }
-        private function setAprovada() {
+        private function setAprovada($aprovada) {
             $this->aprovada = $aprovada;
         }
 // 
@@ -88,7 +77,7 @@
             }
 
         }
-
+    
 
 
 

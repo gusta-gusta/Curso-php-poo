@@ -1,15 +1,12 @@
 <?php
 
-  class Pessoa {
+  class Pessoa{
     private $nome;
     private $idade;
     private $sexo;
 
-    function __construct ($no, $id, $se) {
-      $this->nome = $no;
-      $this->idade = $id;
-      $this->sexo = $se;
-    }
+
+    
      function getNome() {
       return $this->nome;
     }
@@ -19,17 +16,17 @@
      function getSexo() {
       return $this->sexo;
     }
-     function setNome($no) {
-      $this->nome = $no;
+     function setNome($nome) {
+      $this->nome = $nome;
     }
-     function setIdade($id) {
-      $this->idade = $id;
+     function setIdade($idade) {
+      $this->idade = $idade;
     }
-     function setSexo($se) {
-      $this->sexo = $se;
+     function setSexo($sexo) {
+      $this->sexo = $sexo;
     }
 
-    public function fazerAniver() {
+    public function Aniversario() {
       $this->setIdade($this->getIdade() + 1);
       echo $this->getNome() . " fez aniversário agora tem " . $this->getIdade() . " anos de idade. Parabéns.";
     }

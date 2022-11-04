@@ -1,75 +1,99 @@
 <?php
+require_once 'Pessoa.php';
+require_once 'Publicacao.php';
 
-    Class Livro{ 
+class Livro implements Publicacao{
+  private $titulo;
+  private $autor;
+  private $totPaginas;
+  private $pagAtual;
+  private $aberto;
+  private $leitor;
 
-// Atributos
-        private $titulo;
-        private $autor;
-        private $totPaginas;
-        private $pagAtual;
-        private $aberto;
-        private $leitor;
-
-// Método Construtor
-        function _construct() {
-            $this->$tit = $titulo;
-            $this->$aut = $autor;
-            $this->$totpg = $totPaginas;
-            $this->pgat = $pagAtual;
-            $this->ab = $aberto;
-            $this->lei = $leitor;
-
-        }
-//Getters
-        function getTitulo() {
-            return $this->tit;
-        }
-        function getAutor() {
-            return $this->aut;
-        }
-        function getTotPag() {
-            return $this->totpg;
-        }
-        function getPagAtual() {
-            return $this->pgat;
-        }
-        function getAberto() {
-            return $this->ab;
-        }
-        function getLeitor() {
-            return $this->lei;
-        }
-//Setters
-        function setTitulo() {
-            $this->tit = $titulo;
-        }
-        function setAutor() {
-            $this->aut = $autor;
-        }
-        function setTotPag() {
-            $this->totpg = $totPaginas;
-        }
-        function setPagAtual() {
-            $this->pgat = $pagAtual;
-        }
-        function setAberto() {
-            $this->ab = $aberto;
-        }
-        function setIdade() {
-            $this->id = $idade;
-        }
-
-        public function detalhes(){
-
-        }
-// 
-
-        
-
+  function __construct($ti, $au, $pag,$lei) {
+    $this->titulo = $ti;
+    $this->autor = $au;
+    $this->totPaginas = $pag;
+    $this->pagAtual = 1;
+    $this->aberto = false;
+    $this->leitor = $lei;
+  }
+   function getTitulo () {
+    return $this->titulo;
+  }
+   function getAutor () {
+    return $this->autor;
+  }
+   function getTotPaginas () {
+    return $this->totPaginas;
+  }
+   function getPagAtual () {
+    return $this->pagAtual;
+  }
+   function getAberto () {
+    return $this->aberto;
+  }
+   function getLeitor () {
+    return $this->leitor;
+  }
+   function setTitulo ($ti) {
+    $this->titulo = $ti;
+  }
+   function setAutor ($au) {
+    $this->autor = $au;
+  }
+   function setTotPaginas ($tot) {
+    $this->totPaginas = $tot;
+  }
+   function setPagAtual ($pa) {
+    $this->pagAtual = $pa;
+  }
+   function setAberto ($ab) {
+    $this->aberto = $ab;
+  }
+   function setLeitor ($lei) {
+    $this->leitor = $lei;
+  }
+  public function detalhes() {
+    echo "Livro: " . $this->titulo . " escrito por " . $this->autor;
+    echo "<br />Páginas: " . $this->totPaginas . " Atual: " . $this->getPagAtual();
+    echo "<br />Sendo lido por " . $this->leitor->getNome();
+  }
+  public function abrir(){
+    if ($this->getAberto() == true) {
+      echo "Já estou aberto";
+    } else {
+      $this->setAberto(true);
     }
+  }
+  public function fechar(){
+    if ($this->getAberto() == false) {
+      echo "Já estou fechado";
+    } else {
+      $this->setAberto(false);
+    }
+  }
+  public function folhear($p){
+    if ($this->aberto == true && $p <= $this->getTotPaginas()) {
+      $this->pagAtual = $p;
+    } else {
+      echo "O livro está fechado ou estou indo para uma página inacessivel";
+    }
+  }
+  public function avancarPag(){
+    if ($this->aberto == false or $this->getPagAtual() == $this->getTotPaginas()) {
+      echo "Não posso avançar estou fechado ou no fim do livro";
+    } else {
+      $this->setPagAtual($this->getPagAtual() + 1);
+    }
+  }
+  public function voltarPag(){
+    if ($this->aberto == false or $this->getPagAtual() == 1) {
+      echo "Não posso voltar estou fechado ou na página inicial";
+    } else {
+      $this->setPagAtual($this->getPagAtual() - 1);
+    }
+  }
+}
 
-
-
-
-
-?>
+ ?>

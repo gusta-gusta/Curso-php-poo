@@ -5,7 +5,7 @@
         private $nome;
         private $idade;
         private $sexo;
-    }
+    
 
     function getNome() {
         return $this->nome;
@@ -16,7 +16,8 @@
       function getIdade() {
         return $this->idade;
       }
-       function setX($idade) {
+      
+       function setIdade($idade) {
         $this->idade = $idade;
       }
       function getsexo() {
@@ -26,9 +27,9 @@
         $this->sexo = $sexo;
       }
 
-      public function FazerAniversario() {
-        $this->getIdade() = $this->idade + 1;
+       function FazerAniversario() {
+        $this->idade = $this->idade + 1;
         echo "Feliz Aniversario!!!!";
       }
-
+}
 ?>

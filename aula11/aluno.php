@@ -21,16 +21,16 @@
               }
 
         public function Matricula() {
-            echo $this->getNome() . " está Matriculado";
+            echo "<p>" . $this->getNome() . " está Matriculado </p>";
         }
 
         public function Cursando() {
-            echo $this->getNome() . " está Cursando: " . $this->getCurso();
+            echo "<p>" . $this->getNome() . " está Cursando: " . $this->getCurso() . "</p>";
 
         }
 
         public function pagarMensalidade() {
-            echo "O Aluno : " . $this->getNome() . " está pagando a mensalidade de :" . $this->getMensalidade();
+            echo "<p>O Aluno : " . $this->getNome() . " está pagando a mensalidade de: " . $this->getMensalidade() . "</br></p>";
         }
     }
 

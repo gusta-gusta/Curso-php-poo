@@ -3,7 +3,7 @@
 
 require_once 'pessoa.php';
 
-class Visitante{
+class Visitante extends Pessoa{
 
 }
 

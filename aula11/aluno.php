@@ -1,38 +1,23 @@
 <?php
-    require_once 'pessoa.php';
+  require_once 'pessoa.php';
+  class Aluno extends Pessoa {
+    private $matricula;
+    private $curso;
 
-    class Aluno extends Pessoa{
-
-            #atributo
-            private $curso;
-            private $mensalidade;
-
-            function getCurso() {
-                return $this->curso;
-              }
-               function setCurso($curso) {
-                $this->curso = $curso;
-              }
-              function getMensalidade() {
-                return $this->mensalidade;
-              }
-               function setMensalidade($mensalidade) {
-                $this->mensalidade = $mensalidade;
-              }
-
-        public function Matricula() {
-            echo $this->getNome() . " está Matriculado";
-        }
-
-        public function Cursando() {
-            echo $this->getNome() . " está Cursando: " . $this->getCurso();
-
-        }
-
-        public function pagarMensalidade() {
-            echo "O Aluno : " . $this->getNome() . " está pagando a mensalidade de :" . $this->getMensalidade();
-        }
+    public function pagarMensalidade() {
+      echo "<p>Pagando mensalidade do aluno: </p>" . $this->getNome();
     }
-
-
-?>
+    function getMatricula() {
+      return $this->matricula;
+    }
+    function getCurso() {
+      return $this->curso;
+    }
+    function setMatricula($m) {
+      $this->matricula = $m;
+    }
+    function setCurso ($c) {
+      $this->curso = $c;
+    }
+  }
+ ?>

@@ -13,10 +13,9 @@
                 require_once "aluno.php";
                 require_once "visitante.php";
 
-                $p1 = new Aluno();
-                $p1->setNome("Gusta");
-                
-                print_r($p1);
+                $a1 = new Aluno();
+                $a1->setNome("Gustavo");
+                print_r($a1);
         ?>
 
     </pre>

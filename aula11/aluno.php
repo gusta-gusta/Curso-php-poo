@@ -30,5 +30,5 @@
             echo "O Aluno : " . $this->getNome() . " está pagando a mensalidade de :" . $this->getMensalidade();
         }
     }
-  }
+  
  ?>

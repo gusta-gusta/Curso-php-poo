@@ -12,10 +12,19 @@
 
                 require_once "aluno.php";
                 require_once "visitante.php";
+                require_once 'pessoa.php';
 
-                $a1 = new Aluno();
-                $a1->setNome("Gustavo");
-                print_r($a1);
+                $p1 = new Aluno();
+                $p1->setNome("Gusta");
+                $p1->setCurso("Informática");
+                $p1->setMensalidade("R$" . 265.00);
+                $p1->setIdade(20);
+                $p1->setSexo("M");
+                $p1->pagarMensalidade();
+                $p1->Cursando();
+                $p1->Matricula();
+
+                print_r($p1);
         ?>
 
     </pre>

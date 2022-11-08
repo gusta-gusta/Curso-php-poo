@@ -1,29 +1,34 @@
 <?php
-  abstract class Pessoa {
-    private $nome;
-    private $idade;
-    private $sexo;
+    class Pessoa{
+        #atributos
+        private $nome;
+        private $idade;
+        private $sexo;
+    
 
-    public final function fazerAniversario(){
-      $this->idade ++;
-    }
     function getNome() {
-      return $this->nome;
-    }
-    function getIdade() {
-      return $this->Idade;
-    }
-    function getSexo() {
-      return $this->sexo;
-    }
-    function setNome($n) {
-      $this->nome = $n;
-    }
-    function setIdade($i) {
-      $this->idade = $i;
-    }
-    function setSexo ($s) {
-      $this->sexo = $s;
-    }
-  }
- ?>
+        return $this->nome;
+      }
+       function setNome($nome) {
+        $this->nome = $nome;
+      }
+      function getIdade() {
+        return $this->idade;
+      }
+      
+       function setIdade($idade) {
+        $this->idade = $idade;
+      }
+      function getsexo() {
+        return $this->sexo;
+      }
+       function setSexo($sexo) {
+        $this->sexo = $sexo;
+      }
+
+       function FazerAniversario() {
+        $this->idade = $this->idade + 1;
+        echo "Feliz Aniversario!!!!";
+      }
+}
+?>

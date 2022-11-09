@@ -13,7 +13,9 @@
                 require_once "aluno.php";
                 require_once "visitante.php";
                 require_once 'pessoa.php';
+                require_once 'bolsista.php';
 
+                /*
                 $p1 = new Aluno();
                 $p1->setNome("Gusta");
                 $p1->setCurso("Informática");
@@ -24,7 +26,17 @@
                 $p1->Cursando();
                 $p1->Matricula();
 
-                print_r($p1);
+                print_r($p1); 
+                */
+
+                $b1 = new Bolsista();
+                $b1->setNome("Leozin");
+                $b1->setCurso("ADM");
+                $b1->setMensalidade("R$" . 300.00);
+                $b1->setBolsa(50 . "%");
+                print_r($b1);
+
+
         ?>
 
     </pre>

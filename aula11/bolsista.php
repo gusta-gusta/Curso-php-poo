@@ -18,12 +18,9 @@ class Bolsista extends Aluno {
         echo "<p> Bolsa Renovada com Sucesso! </p>";
     }
 
-    function CalcularBolsa($mensalidade) {
-        $mensalidade = x;
-        $desconto = $bolsa;
-        $valor_descontado = $mensalidade - ($mensalidade / 100 * $desconto);
-        return $valor_descontado;
-      } 
+    public function pagarMensalidade() {
+        echo "<p> O Aluno : " . $this->getNome() . " está pagando a mensalidade de :" . $this->getMensalidade() . "</p>";
+    }
       
     
 

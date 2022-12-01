@@ -14,6 +14,8 @@
             require_once 'reptil.php';
             require_once 'peixe.php';
             require_once 'ave.php';
+            require_once 'cachorro.php';
+            require_once 'canguru.php';
             # Mamifero
             $M = new Mamifero();
             $M->Locomover();
@@ -27,6 +29,21 @@
             #Ave
             $A = new Ave();
             print_r($A);
+            #--------------------#
+            $dog = new Cachorro();
+            $dog->setCorPelo("Castanho Claro");
+            $dog->setPeso(20);
+            $dog->setIdade(4);
+            $dog->setMembros(4);
+            print_r($dog);
+
+            $dog->Emitir_Som();
+            $dog->Locomover();
+            #--------------------#
+            $canguru = new Canguru();
+            print_r($canguru);
+            $canguru->Locomover();
+            $canguru->usarBolsa();
         ?>
     </pre>
 </body>

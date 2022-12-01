@@ -1,12 +1,12 @@
 <?php
     require_once 'animal.php';
     class Mamifero extends Animal {
-        private $corPelo;
+        public $corPelo;
 # Gets e Sets
         function getCorPelo() {
             return $this->corPelo;
         }
-         function setCorPelo() { 
+         function setCorPelo($corPelo) { 
             $this->$corPelo = $corPelo;
         }
 # Metodos

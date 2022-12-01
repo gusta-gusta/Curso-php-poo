@@ -10,17 +10,20 @@ abstract class Animal {
      function getPeso() {
     return $this->nome;
     }
-     function setPeso() {
+     function setPeso($peso) {
     $this->peso = $peso;
     }
      function getIdade() {
     return $this->idade;
     }
-     function setIdade() {
+     function setIdade($idade) {
     $this->idade = $idade;
     }
      function getMembros() {
     return $this->membros;
+    }
+      function setMembros($membros){
+            $this->membros = $membros;
     }
 # Metodos
     abstract function Locomover(); 
